@@ -1,0 +1,334 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Stepanos Steve Saghbazarian
+Final project IST 541 Fall 2022 */
+
+/*CSS Reset */
+body, header, nav, main, footer, img, h1,h2, h3, h4, h5, aside, figure, figcaption {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* Style rules for body and images */
+
+body {
+	background-color: #FFC67B;
+	
+}
+
+/* Style rules for header and header img */
+header {
+	text-align: center;
+}
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	max-height: 100%;
+} /* Centers logo */
+
+
+.fire {
+	background-color: #F8E8CD;
+	padding: 10px;
+	border-radius: 10px;
+}
+.material-icons {
+	color: red;
+	font-size: 3em;
+}
+
+/* Style rules for Navigation area */
+nav {
+	position: relative;
+	background-color: #824B21;
+	overflow: hidden;
+
+}
+nav ul {
+	list-style-type: none;
+	text-align: center;
+	
+}
+nav li {
+	display: inline-block;
+	font-size: 1.25em;
+	font-family: Geneva, Arial, sans-serif;
+    font-weight: bold;
+	border-right: 1px solid #fff;
+}
+nav li:last-child{
+	border-right: none;
+}
+nav li a {
+	display: block;
+	color: #BC8600;
+	padding: 0.5em 2em;
+	text-decoration: none;
+}
+nav li a:hover{
+	color: #F3D1AC;
+	opacity: 0.9;
+}
+
+h1 {
+	font-size: 4em;
+	text-align: center;
+	padding-bottom: 2px;
+}
+h2 {
+	text-align: center;
+	font-size: 2.5em;
+	padding-bottom: 5px;
+}
+
+h3 {
+	text-align: center;
+	font-size: 1.8em;
+	padding-bottom: 5px;
+}
+
+/* Style rules for Table */
+table {
+	border: 3px solid #2a1f14;
+	border-collapse: collapse;
+	margin: 8px auto;
+}
+ul {
+font-size: 1.5em;
+display: table;
+margin: 0 auto;
+}
+
+caption {
+	text-align: center;
+	font-size: 3em;
+	font-weight: bold;
+	padding: 1%;
+}
+  th, td {
+	  font-size: 2em;
+	  text-align: center;
+        border: 2px solid #2a1f14;
+        padding: 1%;
+    }
+
+    th {
+        background-color: #2a1f14;
+        color: #fff;
+        font-size: 2.15em;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #AB6000;
+    }
+
+
+figure {
+    position: relative;
+    max-width: 875px;
+    margin: 2% auto;
+    border: 8px solid #CBAF76 /*change the color?*/
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(182,129,0,.50); /*change the color?*/
+    color: #fff;
+    width: 100%;
+    padding: 5% 0;
+    text-align: center;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+ 
+.history {
+	text-align: left;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.intro p {
+	text-align: center;
+	padding: 5px;
+}
+
+.grid {
+        grid-template-columns: auto auto auto auto;
+    }
+.grid p {
+	text-align: center;
+}
+
+.cran p {
+	text-align: center;
+	padding: 2%;
+}
+.cranImage {
+	display: block;
+	padding-top: 5px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+}
+
+.ingredients  {
+	text-align: center;
+	border: 3px solid black;
+	padding: 1px;
+	margin: 10px;
+	float: left;
+	width: 33%;
+}
+
+.ingredients3  {
+	text-align: center;
+	border: 3px solid black;
+	padding: 1px;
+	margin: 10px;
+	float: left;
+	width: 33%;
+}
+
+.imageMap {
+	padding: 10px 30px;
+}
+
+/* Create two equal columns that floats next to each other */
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.flex-wrapper {
+ display: flex;
+justify-content: space-between;
+flex-basis: 50%;
+  
+}
+
+/* Clear floats after the columns */
+.flex-item {
+  width: 225%;
+}
+.directions2 {
+	width: 75%;
+	height: auto;
+	text-align: center;
+}
+
+.ingredients  {
+	text-align: center;
+	border: 3px solid black;
+	padding: 1px;
+	margin: 10px;
+	float: left;
+	width: 33%;
+}
+
+.ingredients4  {
+	text-align: center;
+	width: 100%;
+}
+.directions2 p {
+	font-size: 1.2em
+}
+.ingredientTips  {
+	width: 75%;
+	padding-left: 2px;
+	height: auto;
+	text-align: center;	
+}
+
+.ingredients2 {
+	width: 75%;
+	height: auto;
+	text-align: center;
+}
+
+.direction1 {
+	display: block;
+	padding: 10px;
+	padding-top: 2%;
+	text-align: center;
+} /* Cranberry */
+
+
+ 
+.references {
+	text-align: center;
+}
+
+/* styles for the "stepTitle" class, notice that "stepTitle" is preceded by a dot */
+.stepTitle{
+	padding:4px;
+	text-align:center;
+	font-size:16px;
+	background-color:#F7B857;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+
+ }
+
+.stepContent{ 
+	background-color: #824B21;
+	padding:7px;
+	display: flex;
+	justify-content: center;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+
+}
+.stepDescription {
+	width:35%;
+	padding:5px;
+}
+
+.stepImage {
+	width:30%;	
+	padding:5px;
+	text-align: center;
+}
+.stepImage img {
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray	
+}
+
+.intro, .objectives {
+	padding: 20px;
+}
+
+/* Style for Shadow box */
+.row > .column {
+  padding: 10px 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+	
+}
+
+/*Style rules for Footer content */
+footer {
+	text-align: center;
+	font-size: 0.95em;
+	background-color: #BC8600;
+	color:#000000;
+	padding: 1% 0;
+}
+

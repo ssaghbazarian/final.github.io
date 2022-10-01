@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<!-- Stepanos Steve Saghbazarian
+	IST 524 Final Project
+	Fall 2022 -->
+<head>
+<meta charset="UTF-8">
+<title>Thanksgiving Dinner</title>
+<link href="css/styles2.css" rel="stylesheet">
+<!-- Light box JavaScript -->
+<script>
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>	
+</head>
+
+<body>
+	<div id="wrapper">
+	
+		<header>
+			<img src="images/turkey_logo.jpg" alt="turkey clipart">
+		  <!-- end of class headimg -->	
+		</header> <!-- end of header-->
+		
+		<nav>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="turkey.html">Turkey</a></li>
+		<li><a href="mashed.html">Mashed Potatoes</a></li>	
+		<li><a href="cranberry.html">Cranberry Sauce</a></li>
+		<li><a href="history.html">History</a></li>
+		<li><a href="black.html">Black Friday</a></li>
+		<li><a href="football.html">Football Tradition</a></li>
+	</ul><!-- end of unordered list -->
+		
+		</nav><!-- end of Navigation -->
+	
+	<main>
+		<div class="nflLogo">
+	<img src="images/NFL-Thanksgiving.gif" alt="NFL Thanksgiving logo">
+	<h2>NFL on Thanksgiving Thursday</h2>	
+		</div> <!-- end of nflLogo -->
+		
+		<div class="music">
+		<p>NFL Thanksgiving Theme Song</p>
+		    <audio controls src= "audio/Night Football Thanksgiving Night Special Intro_Theme (320kbps).mp3"> 
+           This browser does not support HTML audio
+        </audio>
+</div> <!-- end of music -->	
+	<br>	
+	<hr>	
+		
+	<div class="video1">
+	<h2> How it Started </h2>
+		<br>
+		
+		<video  controls  width="500">
+<source src="video/The ENTIRE History of NFL Thanksgiving!-Cellular High.mp4" type="video/mp4" />
+       <track id="entrack" label="English subtitles" kind="captions" src="video/captions.vtt" srclang="en" default>
+HTML5 Video not supported
+</video>
+		</div><!-- end of video1 -->
+		
+<div class="video2">
+	<br>
+	<h2> 50 Top Thanksgiving Plays </h2>
+		<br>
+		
+		<video  controls  width="500">
+<source src="video/Top 50 Thanksgiving Moments in NFL History!-Cellular High.mp4" type="video/mp4" />
+   <track id="entrack2" label="English subtitles" kind="captions" src="video/captions.vtt" srclang="en" default>
+HTML5 Video not supported
+</video>
+		</div><!-- end of video1 -->		
+		<br>
+		<h4>Click on an image:</h4>
+		
+	<!-- Images used to open the lightbox -->
+<div class="row">
+  <div class="column">
+    <img src="images/madden.jpeg" alt="John Madden with Turkey" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="images/sherman_turkey03.jpeg" alt="Sherman and Wilson with Turkey" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="images/sherman_turkey01.jpeg" alt="Richard Sherman eating a turkey leg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="images/sherman_turkey02.jpeg" alt="Richard Sherman looking at Turkey leg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/madden.jpeg" alt="John Madden with Turkey" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="images/sherman_turkey03.jpeg" alt="Sherman and Wilson with Turkey" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/sherman_turkey01.jpeg" alt="Richard Sherman looking at Turkey leg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="images/sherman_turkey02.jpeg" alt="Richard Sherman looking at Turkey leg" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="images/madden.jpeg" onclick="currentSlide(1)" alt="Madden with Turkey">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/sherman_turkey03.jpeg" onclick="currentSlide(2)" alt="Wilson and Sherman with Turkey">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/sherman_turkey01.jpeg"  onclick="currentSlide(3)" alt="Sherman Eating Turkey leg">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/sherman_turkey02.jpeg" onclick="currentSlide(4)" alt="Sherman Looking at Turkey leg">
+    </div>
+  </div>
+</div>	
+	
+		
+    </main> 
+	<!-- end of main content -->
+	<br>	
+	<footer>
+		<p>Created by: Stepanos Steve Saghbazarian</p>
+		<p>IST 541 - Fall 2022</p>
+		<p>&copy; Copyright 2022.</p>
+		
+		</footer>	
+		
+	</div> <!-- end of wrapper -->
+	
+
+
+	
+<script type="text/javascript">
+$(function() {
+	$( "#Slider1" ).slider(); 
+});
+    </script>
+</body>
+</html>
